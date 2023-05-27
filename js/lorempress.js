@@ -1,7 +1,7 @@
 /**
 * Title: LoremPress
 * Description: Dummy text generator.
-* Version: 1.0
+* Version: 1.0.1
 * Author: Israel Martins
 */
 
@@ -149,10 +149,13 @@ const initiateLoremPress = () => {
     const textGenerationTrigger = document.querySelector('button.generate-text-button');
 
     /* Page output section */
-    const outputSection = document.querySelector('.generated-text');
+    const outputSection = document.querySelector('.generated-text-area');
 
     /* Generates text */
     const generateText = () => {
+        /* Remove the "empty" class from the output section element */
+        outputSection.classList.remove('empty');
+
         const xhr = new XMLHttpRequest();
 
         xhr.open('GET', './source/source-dummy-text.json', true);
@@ -197,8 +200,10 @@ const initiateLoremPress = () => {
         arrayOfParagraphs = [];
         paragraphIndex = 0;
         outputSection.innerHTML = '';
-        /* 2. Generate text */
-        generateText();
+        outputSection.classList.add('empty');
+
+        /* 2. Only generate text when the requested paragraph count is greater or equal to 1 */
+        paragraphCountField.value >= 1 && generateText();
     };
 
     /* Generate text when trigger button is clicked */

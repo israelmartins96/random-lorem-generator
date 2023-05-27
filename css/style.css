@@ -12,7 +12,6 @@
 # Page Title
 # Main Content
     ## Input Area
-        ### Input Area Heading
         ### Input Area Form
             #### Input Group: Paragraph Count
     ## Output Area
@@ -42,6 +41,8 @@
     --link-colour--active: #4507AC;
     --bg-page: #FEFEFE;
     --bg-dark: #4E4E4E;
+    --pad-half-quart: 0.125rem;
+    --pad-quart: 0.25rem;
     --pad-half: 0.5rem;
     --btn-bg: #29AAE3;
     --btn-bg--hover: #3ABBF4;
@@ -52,7 +53,9 @@
     --btn-border: none;
     --btn-border-radius: 0.25rem;
     --full-width: 100%;
+    --border-wid-2: 2px;
     --border-colour: #AAAAAA;
+    --border-radius-quart: 0.25rem;
 }
 
 
@@ -104,6 +107,7 @@ button {
     padding: var(--btn-pad);
     border: var(--btn-border);
     border-radius: var(--btn-border-radius);
+    outline: none;
 }
 
 button:hover {
@@ -116,6 +120,9 @@ button:active {
 
 input[type="number"] {
     font-size: 1.125rem;
+    padding: var(--pad-half-quart) var(--pad-quart);
+    border: var(--border-wid-2) solid var(--border-colour);
+    border-radius: var(--border-radius-quart);
     outline: none;
 }
 
@@ -128,11 +135,6 @@ li {
 /* ## Display */
 .display-block {
     display: block;
-}
-
-/* ## IO Section */
-.i-o-section .heading {
-    padding-bottom: var(--pad-half);
 }
 
 /* ## Input Group */
@@ -183,9 +185,6 @@ li {
     padding-bottom: 2rem;
 }
 
-/* ### Input Area Heading */
-.container .main-content .input-area .heading {}
-
 /* ### Input Area Form */
 .container .main-content .input-area .lorempress-form {}
 
@@ -205,7 +204,7 @@ li {
     display: grid;
     place-items: center;
     height: 4rem;
-    border: 2px dashed var(--border-colour);
+    border: var(--border-wid-2) dashed var(--border-colour);
 }
 
 .container .main-content .output-area .generated-text-area.empty::before {

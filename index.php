@@ -20,8 +20,6 @@
 			<main id="main-content" class="main-content">
 				<!-- Input Area: Where the User Enters Conditions to Generate Text -->
 				<div class="input-area i-o-section">
-					<!-- Input Area Heading -->
-					<h2 class="heading">Input Area</h2>
 					<!-- Input Area Form -->
 					<form class="lorempress-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 						<!-- Input Group for Number of Paragraphs -->
@@ -35,8 +33,6 @@
 				</div>
 				<!-- Output Area: Where Generated Text is Output -->
 				<div class="output-area i-o-section">
-					<!-- Output Area Heading -->
-					<h2 class="heading">Output Area</h2>
 					<!-- Generated Text Container -->
 					<div class="generated-text-area empty"></div>
 				</div>
