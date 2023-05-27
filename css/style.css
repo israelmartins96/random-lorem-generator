@@ -16,6 +16,7 @@
             #### Input Group: Paragraph Count
     ## Output Area
         ### Generated Text Area
+        ### Copy Text Button
 *****************************************************************************
 */
 
@@ -44,9 +45,11 @@
     --pad-half-quart: 0.125rem;
     --pad-quart: 0.25rem;
     --pad-half: 0.5rem;
+    --pad-3-quart: 0.75rem;
     --btn-bg: #29AAE3;
     --btn-bg--hover: #3ABBF4;
     --btn-bg--active: #156184;
+    --btn-success: #10AB44;
     --btn-font-size: 1.25rem;
     --btn-text-colour: var(--text-colour-dark-bg);
     --btn-pad: 0.5rem 1.5rem;
@@ -78,6 +81,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 p {
     color: var(--text-colour-primary);
     line-height: 1.5;
+    padding-bottom: var(--pad-3-quart);
 }
 
 p, a {
@@ -211,4 +215,29 @@ li {
     content: "Generated text will show here";
     color: var(--text-colour-placeholder);
     font-weight: var(--text-bold-5);
+}
+
+/* ### Copy Text Button */
+.container .main-content .output-area .copy-text {
+    position: relative;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.container .main-content .output-area .copy-text.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.container .main-content .output-area .copy-text.copied::after {
+    content: "Copied";
+    background-color: var(--btn-success);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
 }
