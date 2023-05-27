@@ -1,3 +1,10 @@
+/**
+* Title: LoremPress
+* Description: Dummy text generator.
+* Version: 1.0
+* Author: Israel Martins
+*/
+
 const initiateLoremPress = () => {
     /* Text generator initialisation message */
     const loremPressInitMessage = 'Init Text Generator ✔';

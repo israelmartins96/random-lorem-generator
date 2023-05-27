@@ -1,3 +1,215 @@
-.output-area .generated-text p {
-    margin-bottom: 0.5rem;
+/*
+=============================================================================
+***********************************OUTLINE***********************************
+=============================================================================
+# Presets
+# Variables
+# Body
+# General Element Styling
+# General Selector Styling
+# Skip Link
+# Page Container
+# Page Title
+# Main Content
+    ## Input Area
+        ### Input Area Heading
+        ### Input Area Form
+            #### Input Group: Paragraph Count
+    ## Output Area
+        ### Generated Text Area
+*****************************************************************************
+*/
+
+/********* # PRESETS *********/
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/********* # VARIABLES *********/
+:root {
+    --text-colour-heading: #4E4E4E;
+    --text-colour-primary: #6A6A6A;
+    --text-colour-dark-bg: #FEFEFE;
+    --text-colour-placeholder: #AAAAAA;
+    --text-bold-5: 500;
+    --text-bold-7: 700;
+    --letter-space-half: 0.5px;
+    --link-colour: #006CBE;
+    --link-colour--hover: #6A6A6A;
+    --link-colour--active: #4507AC;
+    --bg-page: #FEFEFE;
+    --bg-dark: #4E4E4E;
+    --pad-half: 0.5rem;
+    --btn-bg: #29AAE3;
+    --btn-bg--hover: #3ABBF4;
+    --btn-bg--active: #156184;
+    --btn-font-size: 1.25rem;
+    --btn-text-colour: var(--text-colour-dark-bg);
+    --btn-pad: 0.5rem 1.5rem;
+    --btn-border: none;
+    --btn-border-radius: 0.25rem;
+    --full-width: 100%;
+    --border-colour: #AAAAAA;
+}
+
+
+/********* # BODY *********/
+body {
+    font-family: Montserrat, sans-serif;
+}
+
+
+/********* # GENERAL ELEMENT STYLING *********/
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-colour-heading);
+    font-weight: var(--text-bold-7);
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+    letter-spacing: var(--letter-space-half);
+}
+
+p {
+    color: var(--text-colour-primary);
+    line-height: 1.5;
+}
+
+p, a {
+    font-size: 1.25rem;
+}
+
+a {
+    color: var(--link-colour);
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover, a:not(.skip-link):focus {
+    color: var(--link-colour--hover);
+    text-decoration: underline;
+}
+
+a:active, a:not(.skip-link):active {
+    color: var(--link-colour--active);
+    text-decoration: none;
+}
+
+button {
+    background-color: var(--btn-bg);
+    color: var(--btn-text-colour);
+    font-size: var(--btn-font-size);
+    padding: var(--btn-pad);
+    border: var(--btn-border);
+    border-radius: var(--btn-border-radius);
+}
+
+button:hover {
+    background-color: var(--btn-bg--hover);
+}
+
+button:active {
+    background-color: var(--btn-bg--active);
+}
+
+input[type="number"] {
+    font-size: 1.125rem;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+/********* # GENERAL SELECTOR STYLING *********/
+/* ## Display */
+.display-block {
+    display: block;
+}
+
+/* ## IO Section */
+.i-o-section .heading {
+    padding-bottom: var(--pad-half);
+}
+
+/* ## Input Group */
+.input-group {
+    padding-bottom: var(--pad-half);
+}
+
+
+/********* # SKIP LINK *********/
+.skip-link {
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: var(--text-colour-dark-bg);
+    background-color: var(--bg-dark);
+    padding: 0.25rem 0.5rem;
+    translate: 0 -100%;
+    transition: translate 0.1s ease-in-out;
+}
+
+.skip-link:focus {
+    translate: 0;
+}
+
+
+/********* # PAGE CONTAINER *********/
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg-page);
+}
+
+
+/********* # PAGE TITLE *********/
+.container .page-title-container {
+    text-align: center;
+    padding: 1rem 0 2rem 0;
+}
+
+
+/********* # MAIN CONTENT *********/
+.container .main-content {
+    padding: 0 2rem;
+}
+
+/* ## Input Area */
+.container .main-content .input-area {
+    padding-bottom: 2rem;
+}
+
+/* ### Input Area Heading */
+.container .main-content .input-area .heading {}
+
+/* ### Input Area Form */
+.container .main-content .input-area .lorempress-form {}
+
+/* #### Input Group: Paragraph Count */
+.container .main-content .input-area .lorempress-form .input-group.paragraph-count {}
+
+/* ## Output Area */
+.container .main-content .output-area {}
+
+/* ### Generated Text Area */
+.container .main-content .output-area .generated-text-area {
+    width: 100%;
+    max-width: 1024px;
+}
+
+.container .main-content .output-area .generated-text-area.empty {
+    display: grid;
+    place-items: center;
+    height: 4rem;
+    border: 2px dashed var(--border-colour);
+}
+
+.container .main-content .output-area .generated-text-area.empty::before {
+    content: "Generated text will show here";
+    color: var(--text-colour-placeholder);
+    font-weight: var(--text-bold-5);
 }
