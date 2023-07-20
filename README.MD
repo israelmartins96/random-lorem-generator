@@ -8,4 +8,6 @@
 
 The generated text will appear where "_Generated text will show here_" is.
 
-Enjoy!
+## LIVE DEMO
+
+See live demo [here](https://israelmartins.com/mysandbox/javascript/lorempress/)
