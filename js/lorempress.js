@@ -1,7 +1,7 @@
 /**
 * Title: LoremPress
 * Description: Dummy text generator.
-* Version: 1.3
+* Version: 1.3.1
 * Author: Israel Martins
 */
 
@@ -200,6 +200,8 @@ const initiateLoremPress = () => {
                     if (paragraphCountField.value > arrayOfParagraphs.length) {
                         copiableGeneratedText.innerHTML += `\n\n`;
                         paragraphIndex++;
+                    } else {
+                        showCopyButton();
                     }
 
                     return generateText();
@@ -242,19 +244,14 @@ const initiateLoremPress = () => {
 
     /* Outputs generated text */
     const outputGeneratedText = () => {
-        /* 1. Reset the arrayOfParagraphs, paragraphIndex, and outputSection */
+        /* Reset the input and output variables */
         doReset();
 
-        /* 2. Only generate text when the requested paragraph count is greater or equal to 1 */
+        /* Only generate text when the requested paragraph count is greater or equal to 1 */
         if (paragraphCountField.value >= 1) {
             /* And activate the copy button */
             generateText();
             showResetTrigger();
-            setTimeout(
-                () => showCopyButton(),
-                50
-            );
-
         } else {
             /* Otherwise, deactivate the copy button */
             hideCopyButton();
@@ -263,10 +260,11 @@ const initiateLoremPress = () => {
 
     /* Copies the generated text */
     const copyGeneratedText = () => {
+        /* Select and copy output text */
         copiableGeneratedText.select();
         document.execCommand('copy');
 
-        /* Give the button "copied" class */
+        /* Add "copied" class to the button */
         copyButton.classList.add('copied');
 
         /* Remove the "copied" class from the button */
