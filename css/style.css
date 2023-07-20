@@ -12,11 +12,9 @@
 # Page Title
 # Main Content
     ## Input Area
-        ### Input Area Form
-            #### Input Group: Paragraph Count
     ## Output Area
         ### Generated Text Area
-        ### Copy Text Button
+        ### Copy Text Button / Reset Trigger
 *****************************************************************************
 */
 
@@ -114,6 +112,10 @@ button {
     outline: none;
 }
 
+form button:nth-child(n+3) {
+    margin-left: 1rem;
+}
+
 button:hover {
     background-color: var(--btn-bg--hover);
 }
@@ -189,15 +191,7 @@ li {
     padding-bottom: 2rem;
 }
 
-/* ### Input Area Form */
-.container .main-content .input-area .lorempress-form {}
-
-/* #### Input Group: Paragraph Count */
-.container .main-content .input-area .lorempress-form .input-group.paragraph-count {}
-
 /* ## Output Area */
-.container .main-content .output-area {}
-
 /* ### Generated Text Area */
 .container .main-content .output-area .generated-text-area {
     width: 100%;
@@ -217,14 +211,16 @@ li {
     font-weight: var(--text-bold-5);
 }
 
-/* ### Copy Text Button */
-.container .main-content .output-area .copy-text {
+/* ### Copy Text Button / Reset Trigger */
+.container .main-content .output-area .copy-text,
+.container .main-content .input-area .reset-trigger {
     position: relative;
     opacity: 0;
     pointer-events: none;
 }
 
-.container .main-content .output-area .copy-text.active {
+.container .main-content .output-area .copy-text.active,
+.container .main-content .input-area .reset-trigger.active {
     opacity: 1;
     pointer-events: auto;
 }

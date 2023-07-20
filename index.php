@@ -28,7 +28,9 @@
 							<input type="number" name="paragraph-count-field" id="paragraph-count-field" class="display-block" placeholder="Number of paragraphs">
 						</div>
 						<!-- Text Generation Trigger Button -->
-						<button type="submit" class="generate-text-button">Generate Text</button>
+						<button type="submit" class="generate-text-trigger">Generate Text</button>
+						<!-- Reset Button -->
+						<button type="reset" class="reset-trigger">Reset</button>
 					</form>
 				</div>
 				<!-- Output Area: Where Generated Text is Output -->

@@ -1,7 +1,7 @@
 /**
 * Title: LoremPress
 * Description: Dummy text generator.
-* Version: 1.2
+* Version: 1.3
 * Author: Israel Martins
 */
 
@@ -146,7 +146,10 @@ const initiateLoremPress = () => {
     const paragraphCountField = document.querySelector('#paragraph-count-field');
 
     /* Text generation trigger button */
-    const textGenerationTrigger = document.querySelector('button.generate-text-button');
+    const textGenerationTrigger = document.querySelector('.generate-text-trigger');
+
+    /* Reset trigger */
+    const resetTrigger = document.querySelector('.reset-trigger');
 
     /* Page output section */
     const outputSection = document.querySelector('.generated-text-area');
@@ -155,7 +158,7 @@ const initiateLoremPress = () => {
     const copiableGeneratedText = document.querySelector('.copiable-generated-text');
 
     /* Copy text button */
-    const copyTextButton = document.querySelector('.copy-text');
+    const copyButton = document.querySelector('.copy-text');
 
     /* Generates text */
     const generateText = () => {
@@ -191,8 +194,14 @@ const initiateLoremPress = () => {
                 if (paragraphCountField.value > arrayOfParagraphs.length) {
                     arrayOfParagraphs.push(theParagraph);
                     outputSection.innerHTML += `<p>${arrayOfParagraphs[paragraphIndex]}</p>`;
-                    copiableGeneratedText.innerHTML += `${arrayOfParagraphs[paragraphIndex]}\n\n`;
-                    paragraphIndex++;
+                    copiableGeneratedText.innerHTML += `${arrayOfParagraphs[paragraphIndex]}`;
+
+                    /* Add line breaks to all paragraphs except the last */
+                    if (paragraphCountField.value > arrayOfParagraphs.length) {
+                        copiableGeneratedText.innerHTML += `\n\n`;
+                        paragraphIndex++;
+                    }
+
                     return generateText();
                 }
             }
@@ -201,29 +210,54 @@ const initiateLoremPress = () => {
         xhr.send();
     };
 
-    /* Outputs generated text */
-    const outputGeneratedText = () => {
-        /* 1. Reset the arrayOfParagraphs, paragraphIndex, and outputSection */
+    /* Shows the reset trigger */
+    const showResetTrigger = () => {
+        resetTrigger.classList.add('active');
+    };
+
+    /* Hides the reset trigger */
+    const hideResetTrigger = () => {
+        resetTrigger.classList.remove('active');
+    };
+
+    /* Shows the copy button */
+    const showCopyButton = () => {
+        copyButton.classList.add('active');
+    };
+
+    /* Hides the copy button */
+    const hideCopyButton = () => {
+        copyButton.classList.remove('active');
+    };
+
+    /* Resets the form and output */
+    const doReset = () => {
         arrayOfParagraphs = [];
         paragraphIndex = 0;
         outputSection.innerHTML = '';
         copiableGeneratedText.innerHTML = '';
         outputSection.classList.add('empty');
+        copyButton.classList.contains('active') && copyButton.classList.remove('active');
+    };
+
+    /* Outputs generated text */
+    const outputGeneratedText = () => {
+        /* 1. Reset the arrayOfParagraphs, paragraphIndex, and outputSection */
+        doReset();
 
         /* 2. Only generate text when the requested paragraph count is greater or equal to 1 */
         if (paragraphCountField.value >= 1) {
             /* And activate the copy button */
             generateText();
+            showResetTrigger();
             setTimeout(
-                () => {
-                    copyTextButton.classList.add('active');
-                },
+                () => showCopyButton(),
                 50
             );
 
         } else {
             /* Otherwise, deactivate the copy button */
-            copyTextButton.classList.remove('active');
+            hideCopyButton();
         }
     };
 
@@ -233,12 +267,12 @@ const initiateLoremPress = () => {
         document.execCommand('copy');
 
         /* Give the button "copied" class */
-        copyTextButton.classList.add('copied');
+        copyButton.classList.add('copied');
 
         /* Remove the "copied" class from the button */
         setTimeout(
             () => {
-                copyTextButton.classList.remove('copied');
+                copyButton.classList.remove('copied');
             },
             2000
         );
@@ -250,8 +284,14 @@ const initiateLoremPress = () => {
         outputGeneratedText();
     });
 
+    /* Reset the form and output when reset is triggered */
+    resetTrigger.addEventListener('click', () => {
+        doReset();
+        hideResetTrigger();
+    });
+
     /* Copy the generated text when the Copy button is clicked */
-    copyTextButton.addEventListener('click', copyGeneratedText);
+    copyButton.addEventListener('click', copyGeneratedText);
 
     /* Log initialisation message in console */
     console.log(loremPressInitMessage);
