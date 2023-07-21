@@ -1,7 +1,7 @@
 /**
 * Title: LoremPress
 * Description: Dummy text generator.
-* Version: 1.3.1
+* Version: 1.3.2
 * Author: Israel Martins
 */
 
@@ -232,6 +232,16 @@ const initiateLoremPress = () => {
         copyButton.classList.remove('active');
     };
 
+    let unsetCopiedState;
+
+    /* Resets copy button if in "Copied" state */
+    const clearCopiedState = () => {
+        if (copyButton.classList.contains('copied')) {
+            clearTimeout(unsetCopiedState);
+            copyButton.classList.remove('copied');
+        }
+    };
+
     /* Resets the form and output */
     const doReset = () => {
         arrayOfParagraphs = [];
@@ -239,6 +249,7 @@ const initiateLoremPress = () => {
         outputSection.innerHTML = '';
         copiableGeneratedText.innerHTML = '';
         outputSection.classList.add('empty');
+        clearCopiedState();
         copyButton.classList.contains('active') && copyButton.classList.remove('active');
     };
 
@@ -252,6 +263,7 @@ const initiateLoremPress = () => {
             /* And activate the copy button */
             generateText();
             showResetTrigger();
+            clearCopiedState();
         } else {
             /* Otherwise, deactivate the copy button */
             hideCopyButton();
@@ -268,7 +280,7 @@ const initiateLoremPress = () => {
         copyButton.classList.add('copied');
 
         /* Remove the "copied" class from the button */
-        setTimeout(
+        unsetCopiedState = setTimeout(
             () => {
                 copyButton.classList.remove('copied');
             },
