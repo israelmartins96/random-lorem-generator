@@ -30,17 +30,17 @@
 						<!-- Text Generation Trigger Button -->
 						<button type="submit" class="generate-text-trigger">Generate Text</button>
 						<!-- Reset Button -->
-						<button type="reset" class="reset-trigger">Reset</button>
+						<button type="reset" class="reset-trigger active">Reset</button>
 					</form>
 				</div>
 				<!-- Output Area: Where Generated Text is Output -->
 				<div class="output-area">
+					<!-- Copy text button -->
+					<button type="button" name="copy-text" class="copy-text active">Copy</button>
 					<!-- Generated Text Container -->
 					<div class="generated-text-area empty"></div>
 					<!-- Copiable form of generated text -->
 					<textarea name="copiable-generated-text" class="copiable-generated-text" style="height: 0; opacity: 0; position: absolute; left: -1000%; pointer-events: none;"></textarea>
-					<!-- Copy text button -->
-					<button type="button" name="copy-text" class="copy-text">Copy</button>
 				</div>
 			</main>
 		</div>
