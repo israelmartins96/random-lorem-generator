@@ -4,7 +4,7 @@
 		<title>LoremPress: Demo Text Generator | JavaScript | MySandbox</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="./assets/css/style.css">
 	</head>
 	<body>
 		<!-- Page Container -->
@@ -46,8 +46,8 @@
 		</div>
 		<!-- SCRIPTS -->
 		<!-- Custom Input Script -->
-		<script src="./js/custom-input.js" charset="utf-8" defer></script>
+		<script src="./assets/js/custom-input.js" charset="utf-8" defer></script>
 		<!-- Text Generator Script -->
-		<script src="./js/lorempress.js" charset="utf-8" defer></script>
+		<script src="./assets/js/lorempress.js" charset="utf-8" defer></script>
 	</body>
 </html>
