@@ -42,6 +42,7 @@
     --theme-link-colour: #006cbe;
     --theme-pad-half: 0.5rem;
     --theme-pad-0-75: 0.75rem;
+    --theme-pad-1-75: 1.75rem;
     --theme-button-pad: 1rem 1.75rem;
     --theme-input-pad: 1rem 1.75rem;
     --theme-border-width: 2px;
@@ -316,6 +317,12 @@ button:hover,
 }
 
 /* ## Input Area */
+/* #### Input Label */
+.container .main-content .input-area .input-group .input-label {
+    padding-left: var(--theme-pad-1-75);
+    margin-bottom: 0.5rem;
+}
+
 /* ### Text Generation Trigger */
 .container .main-content .input-area .generate-text-trigger svg {
     stroke-width: 2;
