@@ -34,10 +34,11 @@
     --theme-tertiary: #333;
     --theme-tertiary-2: #666;
     --theme-success: #184e2a;
+    --theme-font-family: Lato, Montserrat, sans-serif;
     --theme-text-colour: #333;
     --theme-text-colour-alt: #fefefe;
     --theme-text-font-size: 1.125rem;
-    --theme-text-weight-7: 700;
+    --theme-text-weight-5: 500;
     --theme-link-colour: #006cbe;
     --theme-pad-half: 0.5rem;
     --theme-pad-0-75: 0.75rem;
@@ -64,8 +65,10 @@
 
 
 /********* # BODY *********/
-body {
-    font-family: Montserrat, sans-serif;
+body,
+button,
+input {
+    font-family: var(--theme-font-family);
 }
 
 
@@ -77,8 +80,8 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--theme-tertiary);
-    font-weight: var(--theme-text-weight-7);
+    color: var(--theme-secondary);
+    font-weight: var(--theme-text-weight-5);
 }
 
 h1,
@@ -90,6 +93,10 @@ h6,
 p,
 a {
     letter-spacing: 0.5px;
+}
+
+h1 {
+    font-size: 3rem;
 }
 
 p {
@@ -300,6 +307,7 @@ button:hover,
 /********* # MAIN CONTENT *********/
 .container .main-content {
     max-width: 640px;
+    margin: auto;
 }
 
 .container .main-content,
