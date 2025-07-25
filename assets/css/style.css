@@ -14,8 +14,8 @@
 # Main Content
     ## Input Area
     ## Output Area
-        ### Generated Text Area
         ### Copy Text Button / Reset Trigger
+        ### Generated Text Area
 *****************************************************************************
 */
 
@@ -341,25 +341,6 @@ button:hover,
 }
 
 /* ## Output Area */
-/* ### Generated Text Area */
-.container .main-content .output-area .generated-text-area {
-    border: var(--theme-border-width) solid var(--theme-tertiary-2);
-}
-
-.container .main-content .output-area .generated-text-area.empty {
-    display: grid;
-    place-items: center;
-}
-
-.container .main-content .output-area .generated-text-area.empty {
-    height: 8rem;
-    border-style: dashed;
-}
-
-.container .main-content .output-area .generated-text-area.empty::before {
-    content: "Text will be generated here";
-}
-
 /* ### Copy Text Button */
 .container .main-content .output-area .copy-text,
 .container .main-content .input-area .reset-trigger {
@@ -385,4 +366,24 @@ button:hover,
 
 .container .main-content .output-area .copy-text:hover svg #copy-all-path {
     animation: stroke-width-toggle 0.75s infinite linear;
+}
+
+/* ### Generated Text Area */
+.container .main-content .output-area .generated-text-area {
+    margin-top: 2.5rem;
+    border: var(--theme-border-width) solid var(--theme-tertiary-2);
+}
+
+.container .main-content .output-area .generated-text-area.empty {
+    display: grid;
+    place-items: center;
+}
+
+.container .main-content .output-area .generated-text-area.empty {
+    height: 8rem;
+    border-style: dashed;
+}
+
+.container .main-content .output-area .generated-text-area.empty::before {
+    content: "Text will be generated here";
 }
