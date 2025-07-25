@@ -19,11 +19,11 @@
 			<!-- Main Content Area -->
 			<main id="main-content" class="main-content w-100">
 				<!-- Input Area: Where the User Enters Conditions to Generate Text -->
-				<div class="input-area">
+				<div class="input-area w-100">
 					<!-- Input Area Form -->
-					<form class="lorempress-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+					<form class="w-100" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 						<!-- Input Group for Number of Paragraphs -->
-						<div class="input-group paragraph-count">
+						<div class="input-group paragraph-count w-100">
 							<label for="paragraph-count-field" class="input-label display-block w-100">Number of paragraphs</label>
 							<input type="number" name="paragraph-count-field" id="paragraph-count-field" class="display-block w-100" placeholder="Number of paragraphs">
 						</div>
@@ -40,7 +40,7 @@
 					</form>
 				</div>
 				<!-- Output Area: Where Generated Text is Output -->
-				<div class="output-area">
+				<div class="output-area w-100">
 					<!-- Copy text button -->
 					<button type="button" name="copy-text" class="copy-text display-flex flex-centre-all w-100 button-has-icon button-disabled">
 						Copy
