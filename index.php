@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 	<head>
-		<title>LoremPress: Demo Text Generator | JavaScript | MySandbox</title>
+		<title>Random Lorem Generator</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="./assets/css/style.css">
@@ -14,7 +14,7 @@
 			<!-- Main Page Header -->
 			<header class="page-title-container text-align-center">
 				<!-- Main Page Heading -->
-				<h1 class="page-title">LoremPress: Demo Text Generator | JavaScript</h1>
+				<h1 class="page-title">Random Lorem Generator (RLG)</h1>
 			</header>
 			<!-- Main Content Area -->
 			<main id="main-content" class="main-content w-100">
