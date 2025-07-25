@@ -59,7 +59,7 @@
 /* Stroke Width */
 @keyframes stroke-width-toggle {
     0%  { stroke-width: 0; }
-    100%  { stroke-width: 6; }
+    100%  { stroke-width: 8; }
 }
 
 
@@ -164,9 +164,14 @@ input[type="number"],
     border-radius: var(--theme-border-radius);
 }
 
+button:hover,
 button:active {
-    background-color: var(--theme-tertiary);
     border-color: var(--theme-tertiary);
+}
+
+button:active {
+    color: var(--theme-text-colour-alt) !important;
+    background-color: var(--theme-tertiary) !important;
 }
 
 /* ## Input */
@@ -198,7 +203,8 @@ input[type="number"] {
 }
 
 /* ## Background */
-.bg-primary {
+.bg-primary,
+button:hover {
     background-color: var(--theme-primary);
 }
 
@@ -210,6 +216,7 @@ input[type="number"] {
 
 p,
 a:not(.skip-link):active,
+button:hover,
 .button-text-colour-default {
     color: var(--theme-text-colour);
 }
@@ -219,7 +226,6 @@ a:not(.skip-link):active,
     color: var(--theme-inactive);
 }
 
-button:hover,
 .button-disabled {
     border-color: var(--theme-tertiary-2);
     background-color: var(--theme-tertiary-2);
@@ -230,17 +236,23 @@ button:hover,
 }
 
 .button-has-icon svg {
-    fill: var(--theme-primary);
-    stroke: var(--theme-primary);
     margin-left: var(--theme-pad-0-75);
     width: 1.25rem;
     height: 1.25rem;
     transition: transform 0.1s ease-in-out;
 }
 
-.button-has-icon.button-enabled:hover svg {
-    fill: var(--theme-primary) !important;
-    stroke: var(--theme-primary) !important;
+.button-has-icon:hover svg {
+    fill: var(--theme-tertiary);
+    stroke: var(--theme-tertiary);
+}
+
+.button-has-icon svg,
+.container .main-content .input-area .reset-trigger:hover svg,
+.container .main-content .input-area .reset-trigger:active svg,
+.button-has-icon:active svg {
+    fill: var(--theme-primary);
+    stroke: var(--theme-primary);
 }
 
 .button-has-icon.button-disabled svg {
@@ -314,6 +326,10 @@ button:hover,
 }
 
 /* ### Reset Trigger */
+.container .main-content .input-area .reset-trigger:hover {
+    background-color: var(--theme-secondary);
+}
+
 .container .main-content .input-area .reset-trigger svg {
     fill: var(--theme-tertiary);
     stroke: var(--theme-tertiary);
