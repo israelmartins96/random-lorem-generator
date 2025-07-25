@@ -21,7 +21,7 @@
 				<!-- Input Area: Where the User Enters Conditions to Generate Text -->
 				<div class="input-area w-100">
 					<!-- Input Area Form -->
-					<form class="w-100" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+					<form class="w-100" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" nonce="">
 						<!-- Input Group for Number of Paragraphs -->
 						<div class="input-group paragraph-count w-100">
 							<label for="paragraph-count-field" class="input-label display-block w-100">Number of paragraphs</label>
