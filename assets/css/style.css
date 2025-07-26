@@ -153,6 +153,7 @@ button {
 button,
 .button-text-colour-default:hover,
 .button-text-colour-default:active,
+.container .main-content .output-area .copy-text.copied::after,
 .skip-link {
     color: var(--theme-text-colour-alt);
 }
