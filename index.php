@@ -25,7 +25,13 @@
 						<!-- Input Group for Number of Paragraphs -->
 						<div class="input-group paragraph-count w-100">
 							<label for="paragraph-count-field" class="input-label display-block w-100">Number of paragraphs</label>
-							<input type="number" name="paragraph-count-field" id="paragraph-count-field" class="display-block w-100" placeholder="Number of paragraphs">
+							<div class="input-field-group has-custom-controls w-100">
+								<input type="number" pattern="[1-9][0-9]*" inputmode="numeric" autofocus="autofocus" name="paragraph-count-field" id="paragraph-count-field" class="display-block w-100" placeholder="Number of paragraphs">
+								<div class="quantity-controls">
+									<button type="button" class="decrement quantity-control">-</button>
+									<button type="button" class="increment quantity-control">+</button>
+								</div>
+							</div>
 						</div>
 						<!-- Text Generation Trigger Button -->
 						<button type="submit" class="generate-text-trigger display-flex flex-centre-all w-100 button-has-icon">

@@ -16,6 +16,7 @@
     ## Output Area
         ### Copy Text Button / Reset Trigger
         ### Generated Text Area
+# Media Queries
 *****************************************************************************
 */
 
@@ -187,6 +188,17 @@ input[type="number"] {
     padding: var(--theme-input-pad);
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    display: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 
 /********* # GENERAL SELECTOR STYLING *********/
 /* ## Display */
@@ -200,7 +212,8 @@ input[type="number"] {
 }
 
 .display-flex.flex-centre-all,
-.container .main-content .output-area .copy-text.copied::after {
+.container .main-content .output-area .copy-text.copied::after,
+.container .main-content .input-area .input-group .input-field-group.has-custom-controls .quantity-controls .quantity-control {
     justify-content: center;
     align-items: center;
 }
@@ -239,7 +252,8 @@ button:hover,
     background-color: var(--theme-tertiary-2);
 }
 
-.button-enabled {
+.button-enabled,
+.container .main-content .input-area .input-group.input-focused .input-label {
     pointer-events: auto;
 }
 
@@ -277,9 +291,13 @@ button:hover,
 /********* # SKIP LINK *********/
 .skip-link {
     position: fixed;
-    padding: 0.25rem 0.5rem;
     translate: 0 -100%;
     transition: translate 0.1s ease-in-out;
+}
+
+.skip-link,
+.container .main-content .input-area .input-group .input-field-group.has-custom-controls .quantity-controls .quantity-control {
+    padding: 0.25rem 0.5rem;
 }
 
 .skip-link,
@@ -321,6 +339,38 @@ button:hover,
 .container .main-content .input-area .input-group .input-label {
     padding-left: var(--theme-pad-1-75);
     margin-bottom: 0.5rem;
+    transform: translateY(48px);
+    pointer-events: none;
+}
+
+.container .main-content .input-area .input-group.input-focused .input-label {
+    transform: translateY(0);
+}
+
+/* #### Input Field Group */
+.container .main-content .input-area .input-group .input-field-group.has-custom-controls {
+    position: relative;
+}
+
+/* ##### Quantity Controls */
+.container .main-content .input-area .input-group .input-field-group.has-custom-controls .quantity-controls,
+.container .main-content .output-area .copy-text.copied::after {
+    position: absolute;
+    right: 0;
+}
+
+.container .main-content .input-area .input-group .input-field-group.has-custom-controls .quantity-controls {
+    top: 50%;
+    margin-right: 0.325rem;
+    transform: translateY(-50%);
+}
+
+.container .main-content .input-area .input-group .input-field-group.has-custom-controls .quantity-controls .quantity-control {
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    display: inline-flex;
+    margin: 0;
 }
 
 /* ### Text Generation Trigger */
@@ -370,8 +420,6 @@ button:hover,
 .container .main-content .output-area .copy-text.copied::after {
     content: "Copied ✔";
     background-color: var(--theme-success);
-    position: absolute;
-    right: 0;
     bottom: 0;
 }
 
@@ -401,4 +449,23 @@ button:hover,
 
 .container .main-content .output-area .generated-text-area.empty::before {
     content: "Text will be generated here";
+}
+
+
+/********* # MEDIA QUERIES *********/
+@media screen and (max-width: 425px) {
+    /* ##### Quantity Controls */
+    .container .main-content .input-area .input-group .input-field-group.has-custom-controls .quantity-controls {
+        margin-right: 0.75rem;
+    }
+    
+    .container .main-content .input-area .input-group .input-field-group.has-custom-controls .quantity-controls .quantity-control {
+        font-size: var(--theme-text-font-size);
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .container .main-content .input-area .input-group .input-field-group.has-custom-controls .quantity-controls .quantity-control:nth-child(n+2) {
+        margin-left: 0.25rem;
+    }
 }
