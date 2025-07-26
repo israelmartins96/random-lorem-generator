@@ -453,6 +453,17 @@ button:hover,
 
 
 /********* # MEDIA QUERIES *********/
+/* ## Max-Width: 960px */
+@media screen and (max-width: 960px) {
+    .container .main-content .input-area .generate-text-trigger:hover svg .cog,
+    .container .main-content .input-area .reset-trigger:hover svg #reset-arrow,
+    .container .main-content .output-area .copy-text:hover svg #copy-all-path {
+        animation-iteration-count: 1;
+    }
+}
+
+
+/* ## Max-Width: 425px */
 @media screen and (max-width: 425px) {
     /* ##### Quantity Controls */
     .container .main-content .input-area .input-group .input-field-group.has-custom-controls .quantity-controls {
