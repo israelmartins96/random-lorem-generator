@@ -4,7 +4,7 @@
 		<title>Random Lorem Generator</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="./assets/css/style.css">
+		<link rel="stylesheet" href="./assets/css/style.min.css">
 	</head>
 	<body>
 		<!-- Page Container -->
@@ -63,9 +63,7 @@
 			</main>
 		</div>
 		<!-- SCRIPTS -->
-		<!-- Custom Input Script -->
-		<script src="./assets/js/custom-input.js" charset="utf-8" defer></script>
 		<!-- Random Lorem Generator Script -->
-		<script src="./assets/js/random-lorem-generator.js" charset="utf-8" defer></script>
+		<script src="./assets/js/random-lorem-generator-bundled.min.js" charset="utf-8" defer></script>
 	</body>
 </html>
