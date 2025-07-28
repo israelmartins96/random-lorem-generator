@@ -70,10 +70,10 @@ const enableCustomInput = () => {
     /**
      * @function showCountFieldLabel
      * @description Shows the custom label/placeholder by adding the focus class to the input group
-     * and removing the native placeholder attribute.
+     * and removing the native placeholder attribute when the field contains a value.
      */
     const showCountFieldLabel = () => {
-        if (!paragraphCountFieldGroup.classList.contains(paragraphCountFieldFocusClass)) {
+        if (!paragraphCountFieldGroup.classList.contains(paragraphCountFieldFocusClass) && paragraphCountField.value.length >= 1) {
             paragraphCountFieldGroup.classList.add(paragraphCountFieldFocusClass);
             paragraphCountField.removeAttribute('placeholder');
         }
