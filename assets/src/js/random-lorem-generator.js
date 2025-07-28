@@ -1,9 +1,9 @@
 /**
- * Random Lorem Generator (Main Application Script).
- * 
+ * @file Random Lorem Generator (text generation engine).
  * @description Handles the generation of non-distracting random dummy placeholder text.
  * @version 2.0.0
- * @author Israel Martins <hello@israelmartins.com>, Lightbulb Devs <dev@lightbulbdevs.com>
+ * @author Lightbulb Devs <dev@lightbulbdevs.com>
+ * @author Israel Martins <hello@israelmartins.com> (GitHub: @israelmartins96, X: @_izrel)
  */
 
 /**
