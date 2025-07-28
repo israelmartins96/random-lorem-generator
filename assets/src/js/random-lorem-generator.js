@@ -462,6 +462,7 @@ const initialiseRandomLoremGenerator = () => {
         copiableGeneratedText.innerHTML = '';
         outputSection.classList.add('empty');
         clearCopiedState();
+        paragraphCountField.focus();
     };
 
     /**
