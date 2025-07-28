@@ -53,6 +53,11 @@
     box-sizing: border-box;
 }
 
+::selection {
+    color: var(--theme-text-colour-alt);
+    background-color: var(--theme-secondary);
+}
+
 
 /********* # KEYFRAMES *********/
 /* ## Rotate Clockwise */
