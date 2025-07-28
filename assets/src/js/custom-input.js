@@ -3,7 +3,8 @@
  * @description Handles the functionality of the custom number input field.
  * @since 2.0.0
  * @version 1.0.0
- * @author Israel Martins <hello@israelmartins.com>, Lightbulb Devs <dev@lightbulbdevs.com>
+ * @author Lightbulb Devs <dev@lightbulbdevs.com>
+ * @author Israel Martins <hello@israelmartins.com> (GitHub: @israelmartins96, X: @_izrel)
  */
 
 /**
