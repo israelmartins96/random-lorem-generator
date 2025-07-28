@@ -1,4 +1,5 @@
-assets/js/raw.lorempress.js
+node_modules
+assets/src/js/raw.lorempress.js
 the-conditions.txt
 lorempress.zip
 git_ssh_key
