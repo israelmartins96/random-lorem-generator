@@ -18,6 +18,12 @@
 			</header>
 			<!-- Main Content Area -->
 			<main id="main-content" class="main-content w-100">
+				<!-- Intro Section -->
+				<div class="intro-section margin-bottom-2">
+					<p>Generate unique, distraction-free paragraphs to help you stay focused on layout and design.</p>
+					<p>Choose paragraph number → Generate Text → Copy → Use.</p>
+					<p>Perfect for mockups, wireframes, or testing layouts — generate pattern-free text on the fly.</p>
+				</div>
 				<!-- Input Area: Where the User Enters Conditions to Generate Text -->
 				<div class="input-area w-100">
 					<!-- Input Area Form -->
