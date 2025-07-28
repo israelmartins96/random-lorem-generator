@@ -1,7 +1,6 @@
 /**
- * Custom Input Field Behaviours.
- *
- * @description Handles the behaviour/functionality of the custom number input field.
+ * @file Handles custom input field functionality.
+ * @description Handles the functionality of the custom number input field.
  * @since 2.0.0
  * @version 1.0.0
  * @author Israel Martins <hello@israelmartins.com>, Lightbulb Devs <dev@lightbulbdevs.com>
@@ -86,6 +85,10 @@ const enableCustomInput = () => {
     const removeLeadingZero = () => {
         if (paragraphCountField.value.startsWith('0')) {
             paragraphCountField.value = paragraphCountField.value.replace(/^0+/, '');
+
+            if (paragraphCountField.value.length >= 1) {
+                showCountFieldLabel();
+            }
         }
     };
 
