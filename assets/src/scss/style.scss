@@ -2,8 +2,8 @@
 =============================================================================
 ***********************************OUTLINE***********************************
 =============================================================================
-# Presets
 # Variables
+# Presets
 # Keyframes
 # Body
 # General Element Styling
@@ -19,14 +19,6 @@
 # Media Queries
 *****************************************************************************
 */
-
-/********* # PRESETS *********/
-*, ::before, ::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 
 /********* # VARIABLES *********/
 :root {
@@ -51,6 +43,14 @@
     --theme-border-width: 2px;
     --theme-border-radius: 0.125rem;
     --theme-inactive: #aaa;
+}
+
+
+/********* # PRESETS *********/
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 
