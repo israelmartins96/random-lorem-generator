@@ -69,7 +69,8 @@ const paths = {
         src: {
             main: [
                 'assets/src/js/random-lorem-generator.js',
-                'assets/src/js/custom-input.js'
+                'assets/src/js/custom-input.js',
+                'assets/src/js/form-feedback.js'
             ],
             dir: 'assets/src/js/',
             files: [
