@@ -56,25 +56,28 @@ const paths = {
     },
     styles: {
         src: {
-            main: 'src/scss/style.scss',
-            dir: 'src/scss/',
+            main: 'assets/src/scss/style.scss',
+            dir: 'assets/src/scss/',
             files: [
                 'style.scss'
             ]
         },
         dest: './assets/css/',
-        watch: 'src/scss/**/*.scss'
+        watch: 'assets/src/scss/**/*.scss'
     },
     scripts: {
         src: {
-            main: 'src/js/script.js',
-            dir: 'src/js/',
+            main: [
+                'assets/src/js/random-lorem-generator.js',
+                'assets/src/js/custom-input.js'
+            ],
+            dir: 'assets/src/js/',
             files: [
-                'script.js'
+                'random-lorem-generator-bundled.js'
             ]
         },
         dest: './assets/js/',
-        watch: 'src/js/**/*.js'
+        watch: 'assets/src/js/**/*.js'
     },
     php: {
         watch: './**/*.php'
