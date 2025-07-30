@@ -100,6 +100,7 @@ h5,
 h6 {
     color: var(--theme-secondary);
     font-weight: var(--theme-text-weight-5);
+    padding: 0 2rem;
 }
 
 h1,
@@ -506,6 +507,12 @@ button:hover,
 
 
 /* ## Max-Width: 425px */
+@media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
 @media screen and (max-width: 425px) {
     /* ##### Quantity Controls */
     .container .main-content .input-area .input-group .input-field-group.has-custom-controls .quantity-controls {
