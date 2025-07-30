@@ -1,6 +1,6 @@
 node_modules
-assets/src/js/raw.lorempress.js
-the-conditions.txt
-lorempress.zip
+random-lorem-generator
+**/random-lorem-generator*.zip
+**/lorempress**.zip
 git_ssh_key
 git_ssh_key.pub
