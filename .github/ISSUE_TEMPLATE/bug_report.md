@@ -10,7 +10,7 @@ assignees: ''
 
 A clear and concise description of what the bug is.
 
-## 再現手順 (Steps to Reproduce)
+## Steps to Reproduce
 
 Steps to reproduce the behaviour:
 
