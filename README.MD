@@ -63,16 +63,16 @@ We welcome contributions\! Feel, free to raise issues, submit pull requests, or 
 
 ## ❓ Frequently Asked Questions (FAQs)
 
-**What is Random Lorem Generator?**
+### **What is Random Lorem Generator?**
 Random Lorem Generator (RLG) is a web application that creates unique, pattern-free placeholder text paragraphs for your designs and layouts, helping you avoid "Lorem Ipsum blindness."
 
-**How is it different from regular Lorem Ipsum?**
+### **How is it different from regular Lorem Ipsum?**
 Unlike traditional Lorem Ipsum, which often uses predictable phrases, RLG randomly constructs sentences from a large pool of Lorem-based words. This ensures every output is truly unique, preventing your brain from recognising patterns and distracting your design focus.
 
-**Is Random Lorem Generator free?**
+### **Is Random Lorem Generator free?**
 Yes, RLG is completely free and open-source, licensed under the MIT Licence. We are committed to providing a powerful tool accessible to everyone.
 
-**How do I use the web app?**
+### **How do I use the web app?**
 Simply visit the website, specify the number of paragraphs and sentences you need, click 'Generate', and then copy the unique text to your clipboard.
 
 -----
