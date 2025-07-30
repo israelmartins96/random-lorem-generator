@@ -191,14 +191,14 @@ When you're ready to contribute code, please follow this workflow:
 
 1.  **Fork the Repository:** If you haven't already, fork the `random-lorem-generator` repository.
 2.  **Clone Your Fork:** Clone your fork locally.
-3.  **Create a New Branch:** Always work on a new branch for your feature or bug fix. Choose a descriptive name that follows our [Branch Naming Conventions](#branch-naming-conventions).
+3.  **Create a New Branch:** Always work on a new branch for your feature or bug fix. Choose a descriptive name that follows our [Branch Naming Conventions](#-branch-naming-conventions).
     ```bash
     # Examples:
     git checkout -b feature--your-feature-name-here
     git checkout -b bugfix--your-bug-fix-name-here--AB
     ```
-4.  **Make Your Changes:** Implement your bug fix, feature, or documentation improvement. Remember to follow the [Code Style Guidelines](#code-style-guidelines).
-5.  **Commit Your Changes:** Write clear, concise commit messages that follow our [Commit Message Guidelines](#commit-message-guidelines).
+4.  **Make Your Changes:** Implement your bug fix, feature, or documentation improvement. Remember to follow the [Code Style Guidelines](#-code-style-guidelines).
+5.  **Commit Your Changes:** Write clear, concise commit messages that follow our [Commit Message Guidelines](#%EF%B8%8F-commit-message-guidelines).
     ```bash
     git add .
     git commit -m "feat(scope): Your Descriptive Commit Message"
@@ -227,7 +227,7 @@ We'll do our best to respond to issues and pull requests within **3 to 7 working
 
 If you have questions or need help outside of specific GitHub issues, you can reach out via:
 
-  * **Email:** randomloremgenerator@lightbulbdevs.com
+  * **Email:** [randomloremgenerator@lightbulbdevs.com](mailto:randomloremgenerator@lightbulbdevs.com)
 
 -----
 
