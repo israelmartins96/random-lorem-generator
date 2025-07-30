@@ -1,6 +1,7 @@
 # 📝 Random Lorem Generator (RLG)
 
-## [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)] [![GitHub issues](https://img.shields.io/github/issues/israelmartins96/lorempress.svg)]
+## [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+## [![GitHub issues](https://img.shields.io/github/issues/israelmartins96/lorempress.svg)](Issues)
 
 ## 💡 Stop the Distraction. Get Truly Random Lorem Ipsum.
 
@@ -73,3 +74,5 @@ Yes, RLG is completely free and open-source, licensed under the MIT Licence. We 
 
 **How do I use the web app?**
 Simply visit the website, specify the number of paragraphs and sentences you need, click 'Generate', and then copy the unique text to your clipboard.
+
+-----
