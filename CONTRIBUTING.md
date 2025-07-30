@@ -198,7 +198,7 @@ When you're ready to contribute code, please follow this workflow:
     git checkout -b bugfix--your-bug-fix-name-here--AB
     ```
 4.  **Make Your Changes:** Implement your bug fix, feature, or documentation improvement. Remember to follow the [Code Style Guidelines](#-code-style-guidelines).
-5.  **Commit Your Changes:** Write clear, concise commit messages that follow our [Commit Message Guidelines](#-commit-message-guidelines).
+5.  **Commit Your Changes:** Write clear, concise commit messages that follow our [Commit Message Guidelines](#%EF%B8%8F-commit-message-guidelines).
     ```bash
     git add .
     git commit -m "feat(scope): Your Descriptive Commit Message"
