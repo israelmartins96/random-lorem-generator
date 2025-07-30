@@ -1,6 +1,6 @@
 # 📝 Random Lorem Generator (RLG)
 
-## [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![GitHub issues](https://img.shields.io/github/issues/israelmartins96/lorempress.svg](https://github.com/israelmartins96/lorempress/issues)
+## [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)] [![GitHub issues](https://img.shields.io/github/issues/israelmartins96/lorempress.svg)]
 
 ## 💡 Stop the Distraction. Get Truly Random Lorem Ipsum.
 
