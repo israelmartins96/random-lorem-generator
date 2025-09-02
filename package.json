@@ -8,10 +8,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "gulp",
-    "tutorial",
-    "js",
-    "scss"
+    "random lorem generator",
+    "text generator",
+    "lorem ipsum",
+    "pattern-free dummy text",
+    "pattern-free placeholder text",
+    "gulp"
   ],
   "author": "Lightbulb Devs <dev@lightbulbdevs.com>",
   "contributors": [
