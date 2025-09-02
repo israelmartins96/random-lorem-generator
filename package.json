@@ -1,7 +1,7 @@
 {
-  "name": "gulp-test",
-  "version": "0.1.0",
-  "description": "Gulp test tutorial.",
+  "name": "random-lorem-generator",
+  "version": "2.0.0",
+  "description": "A free tool that generates unique, pattern-free placeholder text to keep your design focus sharp and undistracted—solving the hidden problem of repetitive Lorem Ipsum.",
   "type": "module",
   "main": "index.js",
   "scripts": {
@@ -13,8 +13,11 @@
     "js",
     "scss"
   ],
-  "author": "Israel Martins",
-  "license": "GPL-3.0",
+  "author": "Lightbulb Devs <dev@lightbulbdevs.com>",
+  "contributors": [
+    "Israel Martins <hello@israelmartins.com>"
+  ]
+  "license": "MIT",
   "devDependencies": {
     "@babel/preset-env": "^7.25.3",
     "babel-core": "^6.26.3",
